@@ -72,16 +72,16 @@ const shortUrlTmp = new ShortUrl({
          shortUrlTmp.save((saveErr, urlSaved) => {
             
               res.json({
-                originalURL: urlSaved.url,
-                shortURL: urlSaved.shortUrl
+                original_url : urlSaved.url,
+                short_url : urlSaved.shortUrl
               });
             
             });
            });
         }else{
            res.json({
-                originalURL: dbShortUrl.url,
-                shortURL: dbShortUrl.shortUrl
+                original_url: dbShortUrl.url,
+                short_url: dbShortUrl.shortUrl
               });
         }
       });
